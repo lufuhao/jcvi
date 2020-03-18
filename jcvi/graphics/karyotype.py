@@ -402,6 +402,14 @@ def main():
         choices=Shade.Styles,
         help="Style of syntenic wedges",
     )
+    p.add_option(
+        "--outpfx",
+        default="karyotype",
+        dest="outpfx",
+        choices=Shade.Styles,
+        help="File prefix for output image",
+        metavar="FILE_PREFIX"
+    )
     opts, args, iopts = p.set_image_options(figsize="8x7")
 
     if len(args) != 2:
@@ -426,7 +434,7 @@ def main():
     root.set_ylim(0, 1)
     root.set_axis_off()
 
-    pf = "karyotype"
+    pf =  opts.outpfx
     image_name = pf + "." + iopts.format
     savefig(image_name, dpi=iopts.dpi, iopts=iopts)
 
