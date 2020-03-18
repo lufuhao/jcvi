@@ -403,13 +403,15 @@ def main():
         help="Style of syntenic wedges",
     )
     p.add_option(
-        "--outpfx",
+        "-p",
+        "--prefix",
         default="karyotype",
         dest="outpfx",
-        choices=Shade.Styles,
+        type="string",
         help="File prefix for output image",
         metavar="FILE_PREFIX"
     )
+
     opts, args, iopts = p.set_image_options(figsize="8x7")
 
     if len(args) != 2:
