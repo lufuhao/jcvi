@@ -70,7 +70,7 @@ def main():
 
     # Build graph structure
     G = Graph("Assembly graph", filename="graph")
-    G.attr(rankdir="LR", fontname="Helvetica", splines="true")
+    G.attr(rankdir="LR", fontname="Arial", splines="true")
     G.attr(ranksep=".2", nodesep="0.02")
     G.attr('node', shape='point')
     G.attr('edge', dir='none', penwidth='4')

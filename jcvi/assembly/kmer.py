@@ -22,7 +22,7 @@ from jcvi.graphics.base import (
     markup,
     panel_labels,
     normalize_axes,
-    set_ticklabels_helvetica,
+    set_ticklabels_arial,
     write_messages,
 )
 from jcvi.formats.fasta import Fasta
@@ -834,7 +834,7 @@ def multihistogram(args):
     xlabel, ylabel = "K-mer size", "Estimated genome size (Mb)"
     B.set_xlabel(xlabel)
     B.set_ylabel(ylabel)
-    set_ticklabels_helvetica(B)
+    set_ticklabels_arial(B)
 
     labels = ((0.04, 0.96, "A"), (0.54, 0.96, "B"))
     panel_labels(root, labels)

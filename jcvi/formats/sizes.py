@@ -158,7 +158,7 @@ def histogram(args):
         human_base_formatter,
         savefig,
         set2,
-        set_ticklabels_helvetica,
+        set_ticklabels_arial,
     )
 
     p = OptionParser(histogram.__doc__)
@@ -211,7 +211,7 @@ def histogram(args):
     ax2.set_ylabel(ylabel2)
 
     for ax in (ax1, ax2):
-        set_ticklabels_helvetica(ax)
+        set_ticklabels_arial(ax)
         ax.set_xlim((xmin - width / 2, xmax + width / 2))
 
     tc = "gray"

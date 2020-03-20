@@ -253,8 +253,8 @@ class KsPlot(object):
         ax.set_xlabel(markup("Synonymous substitutions per site (*Ks*)"))
         ax.set_ylabel("Percentage of gene pairs (bin={})".format(self.interval))
 
-        ax.set_xticklabels(ax.get_xticks(), family="Helvetica")
-        ax.set_yticklabels(ax.get_yticks(), family="Helvetica")
+        ax.set_xticklabels(ax.get_xticks(), family="Arial")
+        ax.set_yticklabels(ax.get_yticks(), family="Arial")
 
         adjust_spines(ax, ["left", "bottom"], outward=True)
 

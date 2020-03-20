@@ -1733,8 +1733,8 @@ def plot_heatmap(ax, M, breaks, iopts, groups=[], plot_breaks=False, binsize=BIN
 
     ax.set_xlim(xlim)
     ax.set_ylim((xlim[1], xlim[0]))  # Flip the y-axis so the origin is at the top
-    ax.set_xticklabels(ax.get_xticks(), family="Helvetica", color="gray")
-    ax.set_yticklabels(ax.get_yticks(), family="Helvetica", color="gray", rotation=90)
+    ax.set_xticklabels(ax.get_xticks(), family="Arial", color="gray")
+    ax.set_yticklabels(ax.get_yticks(), family="Arial", color="gray", rotation=90)
     ax.tick_params(left=True, bottom=True, labelleft=True, labelbottom=True)
     formatter = ticker.FuncFormatter(
         lambda x, pos: human_readable(int(x) * binsize, pos, base=True)

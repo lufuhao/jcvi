@@ -868,13 +868,13 @@ def normalize_lms_axis(
         ax.set_ylim(0, ylim)
     if xlabel:
         xticklabels = [int(round(x * xfactor)) for x in ax.get_xticks()]
-        ax.set_xticklabels(xticklabels, family="Helvetica")
+        ax.set_xticklabels(xticklabels, family="Arial")
         ax.set_xlabel(xlabel)
     else:
         ax.set_xticks([])
     if ylabel:
         yticklabels = [int(round(x * yfactor)) for x in ax.get_yticks()]
-        ax.set_yticklabels(yticklabels, family="Helvetica")
+        ax.set_yticklabels(yticklabels, family="Arial")
         ax.set_ylabel(ylabel)
     else:
         ax.set_yticks([])
@@ -1983,7 +1983,7 @@ def plot(args):
         while height / len(ax.get_yticks()) < 0.03 and len(ax.get_yticks()) >= 2:
             ax.set_yticks(ax.get_yticks()[::2])  # Sparsify the ticks
         yticklabels = [int(x) for x in ax.get_yticks()]
-        ax.set_yticklabels(yticklabels, family="Helvetica")
+        ax.set_yticklabels(yticklabels, family="Arial")
         if rho < 0:
             ax.invert_yaxis()
 

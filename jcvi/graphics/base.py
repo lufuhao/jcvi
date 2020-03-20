@@ -263,8 +263,8 @@ set_human_base_axis = partial(set_human_axis, formatter=human_base_formatter)
 
 
 def set_helvetica_axis(ax):
-    ax.set_xticklabels([int(x) for x in ax.get_xticks()], family="Helvetica")
-    ax.set_yticklabels([int(x) for x in ax.get_yticks()], family="Helvetica")
+    ax.set_xticklabels([int(x) for x in ax.get_xticks()], family="Arial")
+    ax.set_yticklabels([int(x) for x in ax.get_yticks()], family="Arial")
 
 
 available_fonts = [op.basename(x) for x in glob(datadir + "/*.ttf")]
@@ -308,7 +308,7 @@ def setup_theme(
     context="notebook",
     style="darkgrid",
     palette="deep",
-    font="Helvetica",
+    font="Arial",
     usetex=is_usetex(),
 ):
     try:
@@ -330,7 +330,9 @@ def setup_theme(
             "Set text.usetex={}. Font styles may be inconsistent.".format(usetex)
         )
 
-    if font == "Helvetica":
+    if font == "Arial":
+        rc("font", **{"family": "Arial", "sans-serif", "sans-serif"})
+    elif font == "Helvetica":
         rc("font", **{"family": "sans-serif", "sans-serif": ["Helvetica"]})
     elif font == "Palatino":
         rc("font", **{"family": "serif", "serif": ["Palatino"]})
@@ -495,11 +497,11 @@ def adjust_spines(ax, spines, outward=False, color="lightslategray"):
     ax.tick_params(color=color)
 
 
-def set_ticklabels_helvetica(ax, xcast=int, ycast=int):
+def set_ticklabels_arial(ax, xcast=int, ycast=int):
     xticklabels = [xcast(x) for x in ax.get_xticks()]
     yticklabels = [ycast(x) for x in ax.get_yticks()]
-    ax.set_xticklabels(xticklabels, family="Helvetica")
-    ax.set_yticklabels(yticklabels, family="Helvetica")
+    ax.set_xticklabels(xticklabels, family="Arial")
+    ax.set_yticklabels(yticklabels, family="Arial")
 
 
 def draw_cmap(ax, cmap_text, vmin, vmax, cmap=None, reverse=False):
@@ -655,5 +657,5 @@ def quickplot(
         write_messages(ax, messages)
 
     set_human_axis(ax)
-    set_ticklabels_helvetica(ax)
+    set_ticklabels_arial(ax)
     savefig(figname)

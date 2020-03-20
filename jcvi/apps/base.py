@@ -495,7 +495,7 @@ class OptionParser(OptionP):
         figsize="6x6",
         dpi=300,
         format="pdf",
-        font="Helvetica",
+        font="Arial",
         palette="deep",
         style="darkgrid",
         cmap="jet",
@@ -516,7 +516,7 @@ class OptionParser(OptionP):
             "svg",
             "svgz",
         )
-        allowed_fonts = ("Helvetica", "Palatino", "Schoolbook", "Arial")
+        allowed_fonts = ("Arial", "Palatino", "Schoolbook", "Helvetica")
         allowed_styles = ("darkgrid", "whitegrid", "dark", "white", "ticks")
         allowed_diverge = (
             "BrBG",

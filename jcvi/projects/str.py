@@ -262,7 +262,7 @@ def mendelian_errors2(args):
 
     ax.set_xticks(ticks)
     ax.set_xticklabels(treds, rotation=45, ha="right", size=8)
-    ax.set_yticklabels([int(x) for x in ax.get_yticks()], family="Helvetica")
+    ax.set_yticklabels([int(x) for x in ax.get_yticks()], family="Arial")
     ax.set_ylabel("Mendelian errors (\%)")
     ax.set_ylim(ymin, 100)
 
@@ -385,8 +385,8 @@ def mendelian2(args):
 
     wb = xlwt.Workbook()
     converter = lambda x: int(x) if is_number(x, cast=int) else x
-    header = xlwt.easyxf("font: bold on, name Helvetica; align: horiz center")
-    hc = "font: name Helvetica; align: horiz center;"
+    header = xlwt.easyxf("font: bold on, name Arial; align: horiz center")
+    hc = "font: name Arial; align: horiz center;"
     horiz_center = xlwt.Style.easyxf(hc)
     correct = xlwt.Style.easyxf(hc + "pattern: pattern solid, fore_colour light_green;")
     error = xlwt.Style.easyxf(hc + "pattern: pattern solid, fore_colour rose;")
@@ -633,7 +633,7 @@ def depth(args):
         ax.set_ylim(0, ylim)
 
         yticklabels = [int(x) for x in ax.get_yticks()]
-        ax.set_yticklabels(yticklabels, family="Helvetica", size=14)
+        ax.set_yticklabels(yticklabels, family="Arial", size=14)
 
     root = fig.add_axes([0, 0, 1, 1])
     pad = 0.04
@@ -705,7 +705,7 @@ def mendelian_errors(args):
     ax.set_xticks(ticks)
     ax.set_xticklabels(treds, rotation=45, ha="right", size=8)
     yticklabels = [int(x) for x in ax.get_yticks()]
-    ax.set_yticklabels(yticklabels, family="Helvetica")
+    ax.set_yticklabels(yticklabels, family="Arial")
     ax.set_ylabel("Mendelian errors (\%)")
     ax.set_ylim(ymin, 20)
 

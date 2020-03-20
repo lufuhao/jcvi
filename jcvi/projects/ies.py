@@ -111,7 +111,7 @@ def variation(args):
     F1_counts = Counter(F1_counts)
 
     # Plot the IES variant number diversity
-    from jcvi.graphics.base import plt, savefig, set_ticklabels_helvetica
+    from jcvi.graphics.base import plt, savefig, set_ticklabels_arial
 
     fig = plt.figure(1, (iopts.w, iopts.h))
     if opts.diversity == "variant":
@@ -126,7 +126,7 @@ def variation(args):
         plt.ylabel("Counts")
         plt.title("IES variation in progeny pool")
         ax = plt.gca()
-        set_ticklabels_helvetica(ax)
+        set_ticklabels_arial(ax)
         savefig(F1 + ".counts.pdf")
 
     # Plot the IES breakpoint position diversity
@@ -146,7 +146,7 @@ def variation(args):
         plt.ylabel("Counts")
         plt.xlim(-.5, 20.5)
         ax = plt.gca()
-        set_ticklabels_helvetica(ax)
+        set_ticklabels_arial(ax)
         savefig(F1 + ".breaks.pdf")
         # Serialize the data to a file
         fw = open("Breakpoint-offset-histogram.csv", "w")

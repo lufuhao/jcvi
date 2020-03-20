@@ -20,7 +20,7 @@ from jcvi.graphics.base import (
     normalize_axes,
     panel_labels,
     set2,
-    set_ticklabels_helvetica,
+    set_ticklabels_arial,
 )
 from jcvi.apps.base import OptionParser, ActionDispatcher
 
@@ -451,7 +451,7 @@ def subplot_twinx(
     xticklabels[-1] = r"$1$"
     yticklabels = [float(x) for x in ax.get_yticks()]
     ax.set_xticklabels(xticklabels)
-    ax.set_yticklabels(yticklabels, family="Helvetica")
+    ax.set_yticklabels(yticklabels, family="Arial")
 
     yb = ax2.get_ybound()[1]
     yb = yb // 5 * 5  # make integer interval
@@ -459,7 +459,7 @@ def subplot_twinx(
     ax2.set_ylim(0, 1.1 * yb)
     yticklabels = [int(x) for x in ax2.get_yticks()]
     ax2.set_xticklabels(xticklabels)
-    ax2.set_yticklabels(yticklabels, family="Helvetica")
+    ax2.set_yticklabels(yticklabels, family="Arial")
     ax2.grid(False)
 
 
@@ -481,7 +481,7 @@ def subplot(
         ax.set_xlim(0, xlim)
     if ylim:
         ax.set_ylim(0, ylim)
-    set_ticklabels_helvetica(ax, xcast=xcast, ycast=ycast)
+    set_ticklabels_arial(ax, xcast=xcast, ycast=ycast)
 
 
 def simulation(args):

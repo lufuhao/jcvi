@@ -661,8 +661,8 @@ def seeds(args):
     for ax in (ax1, ax2, ax3):
         xticklabels = [int(x) for x in ax.get_xticks()]
         yticklabels = [int(x) for x in ax.get_yticks()]
-        ax.set_xticklabels(xticklabels, family='Helvetica', size=8)
-        ax.set_yticklabels(yticklabels, family='Helvetica', size=8)
+        ax.set_xticklabels(xticklabels, family='Arial', size=8)
+        ax.set_yticklabels(yticklabels, family='Arial', size=8)
 
     image_name = op.join(outdir, pf + "." + iopts.format)
     savefig(image_name, dpi=iopts.dpi, iopts=iopts)
