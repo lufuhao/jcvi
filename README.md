@@ -1,3 +1,10 @@
+# README
+
+Not author
+
+Just want to terminate all the errors I met and to make it better
+
+
 # JCVI utility libraries
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.31631.svg)](https://doi.org/10.5281/zenodo.594205)
@@ -112,14 +119,14 @@ pip install jcvi
 To install the development version:
 
 ```console
-pip install git+git://github.com/tanghaibao/jcvi.git
+pip install git+git://github.com/lufuhao/jcvi.git
 ```
 
 Alternatively, if you want to install manually:
 
 ```console
 cd ~/code  # or any directory of your choice
-git clone git://github.com/tanghaibao/jcvi.git
+git clone git://github.com/lufuhao/jcvi.git
 pip install -e .
 ```
 
