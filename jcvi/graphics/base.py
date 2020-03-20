@@ -331,7 +331,7 @@ def setup_theme(
         )
 
     if font == "Arial":
-        rc("font", **{"family": "Arial", "sans-serif", "sans-serif"})
+        rc("font", **{"family": "Arial", "sans-serif", "sans-serif": ["Helvetica"]})
     elif font == "Helvetica":
         rc("font", **{"family": "sans-serif", "sans-serif": ["Helvetica"]})
     elif font == "Palatino":
